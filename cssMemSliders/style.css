@@ -16,7 +16,7 @@ body {
     margin: 5% auto;
 }
 
-.mem-img {
+.slider {
     height: 95%;
     width: 75%;
     min-height: 300px;
@@ -24,7 +24,66 @@ body {
     margin: auto;
 }
 
-.under-mem-img {
+.item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.under-slider {
     display: grid;
     grid-template-columns: 4fr 1fr;
+}
+
+
+/* Кружочки */
+
+.kontroller {
+    text-align: center;
+}
+
+.slider-kontroller {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: rgb(189, 185, 185);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-kontroller:hover {
+    background-color: rgb(51, 50, 50);
+}
+
+
+/* Анимация слайдов */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
