@@ -1,0 +1,30 @@
+div {
+    border: 1px solid red;
+}
+
+body {
+    align-items: center;
+}
+
+.mem-wrapper {
+    height: 95%;
+    width: 75%;
+    min-height: 500px;
+    min-width: 500px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    margin: 5% auto;
+}
+
+.mem-img {
+    height: 95%;
+    width: 75%;
+    min-height: 300px;
+    min-width: 300px;
+    margin: auto;
+}
+
+.under-mem-img {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
