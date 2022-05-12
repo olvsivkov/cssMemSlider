@@ -1,27 +1,21 @@
-/* Индекс слайда по умолчанию */
+let slides = document.getElementsByClassName("item");
+let dots = document.getElementsByClassName("slider-kontroller");
+let text = document.querySelector(".mem-text");
+text.textContent = "crazy woman"
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-function plusSlide() {
-    showSlides(slideIndex += 1);
-}
-
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function minusSlide() {
-    showSlides(slideIndex -= 1);
-}
-
-/* Устанавливает текущий слайд */
 function currentSlide(n) {
     showSlides(slideIndex = n);
+    if (n === 1) text.textContent = "crazy woman"
+    if (n === 2) text.textContent = "the cat screams at the girls"
+    if (n === 3) text.textContent = "This is fine"
+    if (n === 4) text.textContent = "when you shifted the div by 1 pixel in your website"
 }
 
-/* Основная функция слайдера */
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("item");
-    var dots = document.getElementsByClassName("slider-kontroller");
+    let i;
     if (n > slides.length) {
         slideIndex = 1
     }

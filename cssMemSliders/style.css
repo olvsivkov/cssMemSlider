@@ -1,9 +1,12 @@
-div {
-    border: 1px solid red;
-}
-
 body {
     align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #222629;
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 .mem-wrapper {
@@ -14,31 +17,33 @@ body {
     display: grid;
     grid-template-rows: 4fr 1fr;
     margin: 5% auto;
+    background-color: #474B4F;
 }
 
 .slider {
     height: 95%;
-    width: 75%;
+    width: 65%;
     min-height: 300px;
     min-width: 300px;
     margin: auto;
+    padding-bottom: 1%;
 }
 
-.item img {
+img {
     object-fit: cover;
     width: 100%;
-    height: 300px;
+    height: 50%;
+    max-height: 380px;
     border: none !important;
     box-shadow: none !important;
+    margin: auto;
+    overflow: hidden;
 }
 
 .under-slider {
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
-
-
-/* Кружочки */
 
 .kontroller {
     text-align: center;
@@ -49,19 +54,17 @@ body {
     height: 12px;
     width: 12px;
     margin: 0 2px;
-    background-color: rgb(189, 185, 185);
+    background-color: #61892F;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    border: 1px solid #98ff07;
 }
 
 .active,
 .slider-kontroller:hover {
-    background-color: rgb(51, 50, 50);
+    background-color: #98ff07;
 }
-
-
-/* Анимация слайдов */
 
 .slider .item {
     -webkit-animation-name: fade;
@@ -86,4 +89,14 @@ body {
     to {
         opacity: 1
     }
+}
+
+.mem-text {
+    padding: 5%;
+    background-color: #61892F;
+}
+
+.kontroller {
+    padding: 1%;
+    background-color: #6B6E70;
 }
