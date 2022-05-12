@@ -15,6 +15,7 @@ body {
     min-height: 500px;
     min-width: 500px;
     display: grid;
+    align-items: center;
     grid-template-rows: 4fr 1fr;
     margin: 5% auto;
     background-color: #474B4F;
@@ -22,11 +23,11 @@ body {
 
 .slider {
     height: 95%;
-    width: 65%;
     min-height: 300px;
     min-width: 300px;
     margin: auto;
     padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 img {
@@ -99,4 +100,31 @@ img {
 .kontroller {
     padding: 1%;
     background-color: #6B6E70;
+}
+
+@media (max-width: 768px) {
+    .mem-wrapper {
+        height: 95%;
+        width: 75%;
+        min-height: auto;
+        min-width: 300px;
+        display: grid;
+        grid-template-rows: 3fr 2fr;
+        margin: 5% auto;
+        background-color: #474B4F;
+    }
+    .under-slider {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .slider {
+        height: 95%;
+        min-height: 250px;
+        min-width: 300px;
+        margin: auto;
+        padding-bottom: 1%;
+    }
+    .mem-text {
+        min-height: 108px;
+    }
 }
